@@ -26,9 +26,9 @@ class BindingRecyclerAdapter<T, V>(private val viewModel: V, @LayoutRes val layo
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
-            binding.setVariable(BR.item, data.getOrNull(position))
+           /* binding.setVariable(BR.item, data.getOrNull(position))
             binding.setVariable(BR.viewModel, viewModel)
-            binding.setVariable(BR.position, position)
+            binding.setVariable(BR.position, position)*/
         }
     }
 }

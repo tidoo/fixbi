@@ -7,7 +7,9 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.arsi.fixbywallpapers.R
 import com.arsi.fixbywallpapers.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
@@ -26,9 +28,9 @@ class MainActivity : AppCompatActivity() {
          */
         val splashScreen = installSplashScreen()
 
+        super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-        super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         init()

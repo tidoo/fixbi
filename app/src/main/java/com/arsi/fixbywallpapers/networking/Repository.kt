@@ -9,10 +9,11 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
 @ViewModelScoped
-class Repository @Inject constructor(private val remoteDataSource: DataSource) : BaseApiResponse() {
+class Repository @Inject constructor(val remoteDataSource: DataSource) : BaseApiResponse() {
 
     suspend fun getBatmanImages(): Flow<NetworkResult<BatmanApiResponse>> {
         return flow {
+            emit(NetworkResult.Loading())
             emit(safeApiCall { remoteDataSource.getBatmanImages() })
         }.flowOn(Dispatchers.IO)
     }
