@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/round_gray">
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_loading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        app:indicatorColor="@color/yellow"
+        app:indicatorSize="50dp" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_loading_1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        app:indicatorColor="@color/yellow"
+        app:indicatorDirectionCircular="counterclockwise"
+        app:indicatorSize="35dp" />
+
+</RelativeLayout>

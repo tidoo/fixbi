@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.arsi.fixbi.viewModels.BatmanViewModel" />
+
+
+        <variable
+            name="item"
+            type="com.arsi.fixbi.model.BatmanModel" />
+
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <ImageView
+        android:onClick="@{() -> viewModel.onClickImage(item,position)}"
+        android:layout_margin="8dp"
+        image_url= "@{item.imageUrl}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true" />
+</layout>

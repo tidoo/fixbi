@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/imagesListFragment"
-        android:name="com.arsi.fixbywallpapers.ui.ImagesListFragment"
+        android:name="com.arsi.fixbi.ui.ImagesListFragment"
         android:label="fragment_images_list"
         tools:layout="@layout/fragment_images_list">
         <action
@@ -17,8 +17,15 @@
 
     <fragment
         android:id="@+id/imageDetailsFragment"
-        android:name="com.arsi.fixbywallpapers.ui.ImageDetailsFragment"
+        android:name="com.arsi.fixbi.ui.ImageDetailsFragment"
         android:label="fragment_image_details"
-        tools:layout="@layout/fragment_image_details" />
+        tools:layout="@layout/fragment_image_details" >
+
+        <argument
+            android:name="batman"
+            app:argType="com.arsi.fixbi.model.BatmanModel"
+            app:nullable="false" />
+
+    </fragment>
 
 </navigation>

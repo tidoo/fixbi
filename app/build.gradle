@@ -11,7 +11,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.arsi.fixbywallpapers"
+        applicationId "com.arsi.fixbi"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -35,6 +35,7 @@ android {
     }
     buildFeatures {
         viewBinding  true
+        dataBinding true
 //        compose true
     }
 }
@@ -53,6 +54,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
+
+    testImplementation 'org.mockito:mockito-core:3.12.4'
+
 
     // Lifecycle
 
